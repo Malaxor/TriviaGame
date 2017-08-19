@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Trivia Game</title>
+	<meta charset="UTF-8">
+	<!-- CSS -->
+	<link href="assets/css/resets.css" rel="resetsheet">
+	<link href="assets/css/style.css" rel="stylesheet">
+	<!-- jQuery -->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+	<!-- javascript -->
+	<script type="text/javascript" src="assets/javascript/game.js"></script>
+	
+</head>
+
+<body>
+	<div class="container">
+
+		<div id="title"> 
+			<h1>Totally Trivial Trivia</h1>
+		</div>
+		
+		<button id="button-start" onclick="startCount()">
+			<h2 id="button-start-text">Click Here To Start!</h2>
+		</button>
+
+		<div id="timer"></div>
+
+		<div id="quiz-form">
+		  <form action="grade.php" method="post" id="qform">
+
+			<ol class="questions question-one">
+			<h3>1) What was the very first women's magazine called?</h3>
+				<li><input type = "radio" name = "q1" value = "correct">The Ladies Mercury </li>
+				<li><input type = "radio" name = "q1" value = "incorrect">Her World </li>
+				<li><input type = "radio" name = "q1" value = "incorrect">Better Homes and Gardens </li>
+				<li><input type = "radio" name = "q1" value = "incorrect">Cooking and Cleaning for Adulterers </li> 
+			</ol>	
+
+			<ol class="questions question-two">
+			<h3>2) The word 'bible' comes from the Greek word 'biblion': What does biblion mean?</h3>
+				<li><input type = "radio" name = "q2" value = "incorrect">God</li>
+				<li><input type = "radio" name = "q2" value = "incorrect">Philosopher</li>
+				<li><input type = "radio" name = "q2" value = "correct">Book</li>
+				<li><input type = "radio" name = "q2" value = "incorrect">One Religion</li> 
+			</ol>	
+
+			<ol class="questions question-three">
+			<h3>3) In the game "Metal Gear Solid",who is Solid Snake's twin brother?</h3>
+				<li><input type = "radio" name = "q3" value = "incorrect">Ghost Snake</li>
+				<li><input type = "radio" name = "q3" value = "incorrect">Liquid Serpant</li>
+				<li><input type = "radio" name = "q3" value = "correct">Liquid Snake</li>
+				<li><input type = "radio" name = "q3" value = "incorrect">Garden Snake</li> 
+			</ol>	
+
+			<ol class="questions question-four">
+			<h3>4) In what year was the original "Jurassic Park" film released??</h3>
+				<li><input type = "radio" name = "q4" value = "incorrect">2001</li>
+				<li><input type = "radio" name = "q4" value = "incorrect">1989</li>
+				<li><input type = "radio" name = "q4" value = "correct">1993</li>
+				<li><input type = "radio" name = "q4" value = "incorrect">1996</li> 
+			</ol>	
+
+			<ol class="questions question-five">
+			<h3>5) What is the capital of Papua New Guinea?</h3>
+				<li><input type = "radio" name = "q5" value = "incorrect">Bridgetown</li>
+				<li><input type = "radio" name = "q5" value = "incorrect">Suva</li>
+				<li><input type = "radio" name = "q5" value = "incorrect">Georgetown</li>
+				<li><input type = "radio" name = "q5" value = "correct">Port Moresby</li> 
+			</ol>
+		  </form>
+
+		</div><!--END "quiz-form" END-->
+
+		<button id="button-finish" onclick="endGame()">
+			<h2 id="button-finish-text">Finish</h2>
+		</button>
+
+	</div><!--END container END -->
+
+	<div id="finish-screen">
+
+		<p>Correct:
+			<span id="number-correct"></span>
+		</p> 
+
+		<p>Incorrect:
+			<span id="number-incorrect"></span>
+		</p>
+
+	</div>	
+
+
+</body>
+</html>
